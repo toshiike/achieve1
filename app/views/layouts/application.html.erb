@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Achieve1</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+  <header>
+    <ul>
+      <li><a href="https://twitter.com">ホーム</a></li>
+      <li><%=link_to"ツイート一覧",tweets_path %></li>
+      <li><%=link_to"ツイートする",new_tweet_path %></li>
+    </ul>
+  </header>
+
+<%= yield %>
+
+    <footer>
+    <p>© 2017 Twitter, Inc.</p>
+  </footer>
+
+</body>
+</html>
